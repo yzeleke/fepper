@@ -554,7 +554,7 @@ function receiveIframeMessage(event) {
 				urlHandler.pushPattern(data.patternpartial, data.path);
 			}
 
-			if (wsnConnected) {
+			if (this.wsnConnected) {
 				var iFramePath = urlHandler.getFileName(data.patternpartial);
 				wsn.send( '{"url": "'+iFramePath+'", "patternpartial": "'+event.data.patternpartial+'" }' );
 			}
@@ -598,3 +598,4 @@ function receiveIframeMessage(event) {
 window.addEventListener("message", receiveIframeMessage, false);
 
 })(this);
+

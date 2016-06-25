@@ -1,0 +1,320 @@
+  &lt;main&gt;
+    &lt;h2&gt;Fepper&lt;/h2&gt;
+
+    &lt;h1&gt;A frontend prototyper for the rapid prototyping of websites&lt;/h1&gt;
+
+    &lt;h3&gt;Child projects&lt;/h3&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/electric-eloquence/fepper-minimal&quot;&gt;Fepper Minimal&lt;/a&gt;- no unnecessary assets, styles, or Pattern Lab demo.&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/electric-eloquence/fepper-drupal&quot;&gt;Fepper for Drupal&lt;/a&gt;- templates configured for Drupal 8, along with a Drupal theme built to accommodate those templates.&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/electric-eloquence/fepper-wordpress&quot;&gt;Fepper for Wordpress&lt;/a&gt;- templates configured for WordPress, along with a WordPress theme built to accommodate those templates.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h3&gt;Table of contents&lt;/h3&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#install&quot;&gt;Install&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#update&quot;&gt;Update&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#configure&quot;&gt;Configure&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#use&quot;&gt;Use&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#global-data&quot;&gt;Global Data&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#partial-data&quot;&gt;Partial Data&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#static-site-generation&quot;&gt;Static Site Generation&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#the-backend&quot;&gt;The Backend&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#webserved-directories&quot;&gt;Webserved Directories&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#github-pages&quot;&gt;GitHub Pages&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#templater&quot;&gt;Templater&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#mustache-browser&quot;&gt;Mustache Browser&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#html-scraper&quot;&gt;HTML Scraper&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#variables.styl&quot;&gt;variables.styl&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#more-documentation&quot;&gt;More Documentation&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#contributing&quot;&gt;Contributing&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h3&gt;&lt;a id=&quot;install&quot;&gt;&lt;/a&gt;Install&lt;/h3&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;On Mac OS X:
+        &lt;ul&gt;
+          &lt;li&gt;Install&lt;a href=&quot;http://brew.sh&quot;&gt;Homebrew&lt;/a&gt;.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;On other Unix-like OSs:
+        &lt;ul&gt;
+          &lt;li&gt;Permissions might need to be reworked in order to globally install NPMs.&lt;/li&gt;
+          &lt;li&gt;It is a bad practice to run npm as root.&lt;/li&gt;
+          &lt;li&gt;If necessary, recursively chown the global node_modules directory with the standard user&amp;#39;s ownership.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;On non-Unix-like OSs:
+        &lt;ul&gt;
+          &lt;li&gt;Sorry, but Fepper is not supported on non-Unix-like OSs.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Install Node.js and NPM (Node Package Manager).
+        &lt;ul&gt;
+          &lt;li&gt;Requires Node.js v4.0.0 at the very least.&lt;/li&gt;
+          &lt;li&gt;On a Mac:&lt;code&gt;brew install node&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;If already installed, be sure the version is up to date:&lt;code&gt;node -v&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;Update if necessary:&lt;code&gt;brew update &amp;amp;&amp;amp; brew upgrade node&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;If not on a Mac, and not using Homebrew:&lt;a href=&quot;https://nodejs.org/en/download/package-manager/&quot;&gt;https://nodejs.org/en/download/package-manager/&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;After installing Node,&lt;code&gt;npm install -g fepper-cli&lt;/code&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;On Mac OS X:
+        &lt;ul&gt;
+          &lt;li&gt;Double-click&lt;code&gt;fepper.command&lt;/code&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;On other OSs (or if you prefer the command line):
+        &lt;ul&gt;
+          &lt;li&gt;&lt;code&gt;npm install&lt;/code&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;After successful installation:
+        &lt;ul&gt;
+          &lt;li&gt;Double-click&lt;code&gt;fepper.command&lt;/code&gt;again&lt;/li&gt;
+          &lt;li&gt;Or enter&lt;code&gt;fp&lt;/code&gt;on the command line.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Open&lt;a href=&quot;http://localhost:3000&quot;&gt;http://localhost:3000&lt;/a&gt;in a browser if it doesn&amp;#39;t open automatically.&lt;/li&gt;
+      &lt;li&gt;Consult the&lt;a href=&quot;http://patternlab.io/docs/index.html&quot;&gt;Pattern Lab docs&lt;/a&gt;for instructions on using Pattern Lab.&lt;/li&gt;
+      &lt;li&gt;Start editing files in&lt;code&gt;patternlab-node/source&lt;/code&gt;. Changes should automatically appear in the browser.
+        &lt;ul&gt;
+          &lt;li&gt;If changes do not appear immediately, it may be necessary to install a&lt;a href=&quot;http://livereload.com/extensions/&quot;&gt;LiveReload browser extension&lt;/a&gt;.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;To halt Fepper, go to the command line where Fepper is running and press Ctrl+c.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h3&gt;&lt;a id=&quot;update&quot;&gt;&lt;/a&gt;Update&lt;/h3&gt;
+
+    &lt;p&gt;The easiest way to update Fepper is with Git. This generally means forking an 
+Electric Eloquence Fepper repository at your project&amp;#39;s onset, and pulling from 
+the master branch of the main upstream repository when updates are released.&lt;/p&gt;
+
+    &lt;p&gt;All updates must pull from&lt;a href=&quot;https://github.com/electric-eloquence/fepper&quot;&gt;https://github.com/electric-eloquence/fepper&lt;/a&gt;even if your original installation was forked from a child project. Pulling 
+from a child project&amp;#39;s repository may overwrite custom code specific to your 
+project so don&amp;#39;t do it.&lt;/p&gt;
+
+    &lt;p&gt;If not updating with Git, you&amp;#39;ll need to copy the latest package over the old. 
+Be sure to take care that &amp;quot;dot&amp;quot;-prefixed hidden files at the root level are&lt;em&gt;not&lt;/em&gt;overwritten. These are important configuration files specific to each 
+user&amp;#39;s instance.&lt;/p&gt;
+
+    &lt;h3&gt;&lt;a id=&quot;configure&quot;&gt;&lt;/a&gt;Configure&lt;/h3&gt;
+
+    &lt;p&gt;Edit&lt;code&gt;pref.yml&lt;/code&gt;to customize preferences and to view further documentation in 
+the comments. If you wish to use the&lt;code&gt;syncback&lt;/code&gt;,&lt;code&gt;frontend-copy&lt;/code&gt;, or&lt;code&gt;template&lt;/code&gt;tasks, you must supply values for the&lt;code&gt;backend.synced_dirs&lt;/code&gt;preferences in order 
+for those directories to get processed and copied to the backend.&lt;/p&gt;
+
+    &lt;h3&gt;&lt;a id=&quot;use&quot;&gt;&lt;/a&gt;Use&lt;/h3&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;To launch from the Mac OS X Finder:
+        &lt;ul&gt;
+          &lt;li&gt;Double-click&lt;code&gt;fepper.command&lt;/code&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;To launch from the command line:
+        &lt;ul&gt;
+          &lt;li&gt;&lt;code&gt;fp&lt;/code&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;These other utility tasks are runnable on the command line:
+        &lt;ul&gt;
+          &lt;li&gt;&lt;code&gt;fp data&lt;/code&gt;to force compile data.json.&lt;/li&gt;
+          &lt;li&gt;&lt;code&gt;fp frontend-copy&lt;/code&gt;to copy assets, scripts, and styles to the backend.&lt;/li&gt;
+          &lt;li&gt;&lt;code&gt;fp lint&lt;/code&gt;to lint HTML, JavaScripts, and JSON.&lt;/li&gt;
+          &lt;li&gt;&lt;code&gt;fp minify&lt;/code&gt;to minify JavaScripts.&lt;/li&gt;
+          &lt;li&gt;&lt;code&gt;fp once&lt;/code&gt;to clean the public folder and do a one-off Fepper build.&lt;/li&gt;
+          &lt;li&gt;&lt;code&gt;fp publish&lt;/code&gt;to publish the public folder to GitHub Pages.&lt;/li&gt;
+          &lt;li&gt;&lt;code&gt;fp restart&lt;/code&gt;to restart after shutdown, but without opening the browser.&lt;/li&gt;
+          &lt;li&gt;&lt;code&gt;fp static&lt;/code&gt;to generate a static site from the 04-pages directory.&lt;/li&gt;
+          &lt;li&gt;&lt;code&gt;fp syncback&lt;/code&gt;combines lint, minify, frontend-copy, and template.&lt;/li&gt;
+          &lt;li&gt;&lt;code&gt;fp template&lt;/code&gt;translates templates for the backend and copies them there.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;If using Git for version control, directories named &amp;quot;ignore&amp;quot; will be ignored.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h3&gt;&lt;a id=&quot;global-data&quot;&gt;&lt;/a&gt;Global Data&lt;/h3&gt;
+
+    &lt;p&gt;Edit&lt;code&gt;patternlab-node/source/_data/_data.json&lt;/code&gt;to globally populate Mustache 
+templates with data. Manual edits to&lt;code&gt;patternlab-node/source/_data/data.json&lt;/code&gt;will get overwritten on compilation.&lt;/p&gt;
+
+    &lt;h3&gt;&lt;a id=&quot;partial-data&quot;&gt;&lt;/a&gt;Partial Data&lt;/h3&gt;
+
+    &lt;p&gt;Underscore-prefixed .json files within&lt;code&gt;patternlab-node/source/_patterns&lt;/code&gt;will be concatenated to the output of&lt;code&gt;_data.json&lt;/code&gt;, the whole in turn getting compiled into&lt;code&gt;data.json&lt;/code&gt;, the final 
+source of globally scoped data.&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;Partial data&lt;/em&gt;is distinct from&lt;em&gt;pattern data&lt;/em&gt;. For example,&lt;code&gt;00-homepage.json&lt;/code&gt;is&lt;em&gt;pattern data&lt;/em&gt;and specific to the&lt;code&gt;00-homepage&lt;/code&gt;pattern. No other pattern 
+will pick up&lt;code&gt;00-homepage.json&lt;/code&gt;, even if&lt;code&gt;00-homepage.mustache&lt;/code&gt;is included in 
+another pattern. However,&lt;code&gt;_00-homepage.json&lt;/code&gt;is&lt;em&gt;partial data&lt;/em&gt;and will get 
+concatenated to the&lt;em&gt;global data&lt;/em&gt;outputted to&lt;code&gt;data.json&lt;/code&gt;.&lt;code&gt;_00-homepage.json&lt;/code&gt;will be picked up by all patterns.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;DO NOT EDIT patternlab-node/source/_data/data.json&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;DO PUT GLOBAL DATA IN patternlab-node/source/_data/_data.json&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;DO LIBERALLY USE PARTIAL DATA IN patternlab-node/source/_patterns FOR ORGANIZATIONAL SANITY&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h3&gt;&lt;a id=&quot;static-site-generation&quot;&gt;&lt;/a&gt;Static Site Generation&lt;/h3&gt;
+
+    &lt;p&gt;Running&lt;code&gt;fp static&lt;/code&gt;will generate a complete static site based on the files 
+in&lt;code&gt;patternlab-node/source/_patterns/04-pages&lt;/code&gt;. The site will be viewable at&lt;a href=&quot;http://localhost:3000/static/&quot;&gt;http://localhost:3000/static/&lt;/a&gt;. An&lt;code&gt;index.html&lt;/code&gt;will be generated based on&lt;code&gt;04-pages-00-homepage&lt;/code&gt;or whatever is defined as the 
+homepage in&lt;code&gt;_data.json&lt;/code&gt;. If the links are relative and they work correctly in 
+the Pattern Lab UI, they will work correctly in the static site even if the&lt;code&gt;static&lt;/code&gt;directory is moved and renamed. The only caveat is that links to other 
+pages in the&lt;code&gt;patterns&lt;/code&gt;directory must start with&lt;code&gt;../04-pages-&lt;/code&gt;and not&lt;code&gt;../../patterns/04-pages-&lt;/code&gt;.&lt;/p&gt;
+
+    &lt;h3&gt;&lt;a id=&quot;the-backend&quot;&gt;&lt;/a&gt;The Backend&lt;/h3&gt;
+
+    &lt;p&gt;Fepper can almost as easily work with a CMS backend such as Drupal or WordPress, 
+while not requiring Apache, MySQL, or PHP. Put the actual backend codebase or 
+even just a symbolic link to the codebase into the&lt;code&gt;backend&lt;/code&gt;directory. Then, 
+enter the relative paths to the appropriate backend directories into&lt;code&gt;pref.yml&lt;/code&gt;. 
+(Do not include &amp;quot;backend&amp;quot; or a leading slash.) You will then be able to run&lt;code&gt;fp syncback&lt;/code&gt;or&lt;code&gt;fp frontend-copy&lt;/code&gt;to export your frontend data into your 
+backend web application.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Be sure that&lt;code&gt;backend.synced_dirs.assets_dir&lt;/code&gt;,&lt;code&gt;backend.synced_dirs.scripts_dir&lt;/code&gt;, and&lt;code&gt;backend.synced_dirs.styles_dir&lt;/code&gt;are set in&lt;code&gt;pref.yml&lt;/code&gt;.&lt;/li&gt;
+      &lt;li&gt;The above values set in&lt;code&gt;pref.yml&lt;/code&gt;can be overridden on a per-file basis by similarly named YAML files with similarly named settings.&lt;/li&gt;
+      &lt;li&gt;These YAML files must match the source file&amp;#39;s name with exception of the extension.&lt;/li&gt;
+      &lt;li&gt;The extension must be&lt;code&gt;.yml&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;The overriding property must only contain the lowest level key-value, not the entire hierarchy, i.e. only&lt;code&gt;assets_dir&lt;/code&gt;,&lt;code&gt;scripts_dir&lt;/code&gt;, or&lt;code&gt;styles_dir&lt;/code&gt; &lt;/li&gt;
+      &lt;li&gt;Files prefixed by &amp;quot;__&amp;quot; will be ignored as will files in the&lt;code&gt;_nosync&lt;/code&gt;directory at the root of the source directories.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h3&gt;&lt;a id=&quot;templater&quot;&gt;&lt;/a&gt;Templater&lt;/h3&gt;
+
+    &lt;p&gt;Pattern Lab&amp;#39;s Mustache templates can be translated into templates compatible 
+with your backend. Mustache tags just need to be replaced with tags the backend 
+can use. Put these translations into YAML files named similarly to the Mustache 
+files in&lt;code&gt;patternlab-node/source/_patterns/03-templates&lt;/code&gt;. Follow the example in&lt;code&gt;test/files/_patterns/03-templates/00-homepage.yml&lt;/code&gt;for the correct YAML syntax.&lt;/p&gt;
+
+    &lt;p&gt;Follow these rules for setting up keys and values:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Delete the outer two curly Mustache braces for keys.&lt;/li&gt;
+      &lt;li&gt;Trim any exterior whitespace.&lt;/li&gt;
+      &lt;li&gt;Leave other control structures within the key, i.e., !#/&amp;gt;^{}&lt;/li&gt;
+      &lt;li&gt;Escape parentheses and question marks with two backslashes.&lt;/li&gt;
+      &lt;li&gt;Wrap the key in double quotes.&lt;/li&gt;
+      &lt;li&gt;Follow the closing quote with a colon, space, and pipe.&lt;/li&gt;
+      &lt;li&gt;Indent each line of the value by at least two spaces.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;Run&lt;code&gt;fp syncback&lt;/code&gt;or&lt;code&gt;fp template&lt;/code&gt;to execute the Templater.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Be sure that&lt;code&gt;backend.synced_dirs.templates_dir&lt;/code&gt;and&lt;code&gt;backend.synced_dirs.templates_ext&lt;/code&gt;are set in&lt;code&gt;pref.yml&lt;/code&gt;.&lt;/li&gt;
+      &lt;li&gt;The default&lt;code&gt;templates_dir&lt;/code&gt;and&lt;code&gt;templates_ext&lt;/code&gt;settings in&lt;code&gt;pref.yml&lt;/code&gt;can be overridden by similarly named settings in the template-specific YAML files.&lt;/li&gt;
+      &lt;li&gt;Templates prefixed by &amp;quot;__&amp;quot; will be ignored by the Templater as will files in the&lt;code&gt;_nosync&lt;/code&gt;directory.&lt;/li&gt;
+      &lt;li&gt;The Templater will recurse through nested Mustache templates if the tags are written in the verbose syntax and have the&lt;code&gt;.mustache&lt;/code&gt;extension, i.e.&lt;code&gt;{{&amp;gt; 02-organisms/00-global/00-header.mustache }}&lt;/code&gt;.&lt;/li&gt;
+      &lt;li&gt;However, the more common inclusion use-case is to leave off the extension, and not recurse.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://github.com/electric-eloquence/fepper-drupal&quot;&gt;Fepper for Drupal&lt;/a&gt;and&lt;a href=&quot;https://github.com/electric-eloquence/fepper-wordpress&quot;&gt;Fepper for WordPress&lt;/a&gt;have working examples of templates compatible with the Templater.&lt;/p&gt;
+
+    &lt;h3&gt;&lt;a id=&quot;webserved-directories&quot;&gt;&lt;/a&gt;Webserved Directories&lt;/h3&gt;
+
+    &lt;p&gt;When using a backend, assets generally need to be shared with the Fepper 
+frontend. The&lt;code&gt;syncback&lt;/code&gt;and&lt;code&gt;frontend-copy&lt;/code&gt;tasks copy files from Fepper to the 
+backend, but not the other way. Instead of providing a task to copy in the 
+reverse direction, Fepper serves backend files if their directories are entered 
+into the&lt;code&gt;webserved_dirs&lt;/code&gt;block in&lt;code&gt;pref.yml&lt;/code&gt;. Be sure these values are 
+formatted as YAML array elements.&lt;/p&gt;
+
+    &lt;p&gt;&lt;code&gt;DO NOT INCLUDE DIRECTORIES WITH SOURCE CODE! GITHUB PAGES AND MANY OTHER PUBLIC 
+HOSTS DO NOT PREPROCESS PHP AND OTHER PROGRAMMING LANGUAGES, SO ANY PUBLISHED 
+SOURCE CODE WILL BE RENDERED AS PLAIN TEXT! THIS WILL MAKE PUBLIC ANY SENSITIVE 
+INFORMATION CONTAINED WITHIN THE SOURCE CODE!&lt;/code&gt;&lt;/p&gt;
+
+    &lt;h3&gt;&lt;a id=&quot;github-pages&quot;&gt;&lt;/a&gt;GitHub Pages&lt;/h3&gt;
+
+    &lt;p&gt;If you have checked your Fepper instance into a repository in your GitHub 
+account, you may run&lt;code&gt;fp publish&lt;/code&gt;to publish&lt;code&gt;patternlab-node/public&lt;/code&gt;to GitHub 
+Pages. The Pattern Lab UI and Fepper static files will then be viewable from the 
+Web at&lt;code&gt;http://{user}.github.io/{repo}&lt;/code&gt;. Normally, this is all that is needed. 
+However, if you are using&lt;code&gt;webserved_dirs&lt;/code&gt;, you will need to supply a&lt;code&gt;gh_pages_prefix&lt;/code&gt;preference in&lt;code&gt;pref.yml&lt;/code&gt;. This preference needs to be set to 
+the name of your GitHub repository.&lt;/p&gt;
+
+    &lt;h3&gt;&lt;a id=&quot;mustache-browser&quot;&gt;&lt;/a&gt;Mustache Browser&lt;/h3&gt;
+
+    &lt;p&gt;Mustache code can be viewed in the Pattern Lab UI by clicking the eyeball icon 
+in the upper right, then clicking Code, and then clicking the Mustache tab in 
+the bottom pane. The Mustache tags are hot-linked, and if they are written in 
+the verbose syntax, clicking on them will open that Mustache file and display 
+its code in the Pattern Lab UI, with its Mustache tags hot-linked as well. The 
+Mustache tags must be coded in the verbose-pathed manner:&lt;code&gt;{{&amp;gt; 02-organisms/00-global/00-header }}&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;The path must be correct; however, the&lt;code&gt;.mustache&lt;/code&gt;extension is optional. The 
+default homepage is a working example.&lt;/p&gt;
+
+    &lt;h3&gt;&lt;a id=&quot;html-scraper&quot;&gt;&lt;/a&gt;HTML Scraper&lt;/h3&gt;
+
+    &lt;p&gt;Fepper can scrape and import Mustache templates and JSON data files from actual 
+web pages. A common use-case is to scrape pages from a backend populated with 
+CMS content in order to auto-generate data, and to replicate the HTML structure. 
+To open the Scraper, click Scrape in the Pattern Lab UI, and then click HTML 
+Scraper. Enter the URL of the page you wish to scrape. Then, enter the CSS 
+selector you wish to target (prepended with &amp;quot;#&amp;quot; for IDs and &amp;quot;.&amp;quot; for classes). 
+Classnames and tagnames may be appended with array index notation ([n]). 
+Otherwise, the Scraper will scrape all elements of that class or tag 
+sequentially. Such a loosely targeted scrape will save many of the targeted 
+fields to the JSON file, but will only save the first instance of the target to 
+a Mustache template.&lt;/p&gt;
+
+    &lt;p&gt;Upon submission, you should be able to review the scraped output on the 
+subsequent page. If the output looks correct, enter a filename and submit again. 
+The Scraper will save Mustache and JSON files by that name in the 98-scrape 
+directory, also viewable under the Scrape menu of the toolbar. The Scraper will 
+correctly indent the Mustache code. However, this beautification may also render 
+some attributes of the Mustache code a little different than the original HTML.&lt;/p&gt;
+
+    &lt;h3&gt;&lt;a id=&quot;variables.styl&quot;&gt;&lt;/a&gt;variables.styl&lt;/h3&gt;
+
+    &lt;p&gt;&lt;code&gt;patternlab-node/source/_scripts/src/variables.styl&lt;/code&gt;is a file containing 
+variables that can be shared across the Stylus CSS preprocessor, browser 
+JavaScripts, and PHP backends (and possibly other language backends as well). It 
+ships with these values:&lt;/p&gt;
+
+    &lt;p&gt;&lt;code&gt;bp_lg_max = -1
+bp_lg_min = 1024
+bp_md_min = 768
+bp_sm_min = 480
+bp_xs_min = 0&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;It cannot contain comments, semi-colons, curly braces, etc. It is 
+straightforward to import and use these variables in Stylus and JavaScript. PHP 
+must import them with&lt;code&gt;parse_ini_file()&lt;/code&gt;. Fepper tries to be agnostic about CSS 
+processors and tries to keep the amount of NPMs to download to a minimum, so it 
+does not ship with Stylus (or any other CSS pre/post-processor) configured. 
+However, since Stylus allows for this easy sharing of variables, Fepper does 
+ship with a&lt;code&gt;patternlab-node/source/css-processors/stylus&lt;/code&gt;directory which can 
+be compiled into the stock Pattern Lab CSS by configuring&lt;code&gt;extend/custom/css-process/css-process~extend.js&lt;/code&gt;. The Stylus files are written 
+in the terse, Python-like, indentation-based syntax; however, the more verbose, 
+CSS-like syntax (with curly braces, colons, and semi-colons) is perfectly valid 
+as well.&lt;/p&gt;
+
+    &lt;h3&gt;&lt;a id=&quot;more-documentation&quot;&gt;&lt;/a&gt;More Documentation&lt;/h3&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/electric-eloquence/fepper/blob/master/excludes/default.pref.yml&quot;&gt;default.pref.yml&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://patternlab.io/docs/index.html&quot;&gt;Pattern Lab&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://mustache.github.io/mustache.5.html&quot;&gt;Mustache&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h3&gt;&lt;a id=&quot;contributing&quot;&gt;&lt;/a&gt;Contributing&lt;/h3&gt;
+
+    &lt;p&gt;Contributions and bug fixes are greatly appreciated!&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Please pull request against the&lt;a href=&quot;https://github.com/electric-eloquence/fepper/tree/dev&quot;&gt;dev branch&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;Please try to be both concise as well as clear on what is trying to be accomplished.&lt;/li&gt;
+    &lt;/ul&gt;
+
+  &lt;/main&gt;
+
+        
+
